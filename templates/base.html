@@ -16,14 +16,14 @@
 <!-- ========================= start header ========================= -->
 <header>
     <!-- ========================= start navbar ========================= -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary p-3">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">Gmail Signature Generator</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            {% comment %} <span class="navbar-toggler-icon"></span> {% endcomment %}
             </button>
             
-                <button class="btn btn-outline-success" type="submit" onclick="location.href='{% url 'create' %}'" >Create</button>
+            <button class="btn btn-light" type="submit" onclick="location.href='{% url 'create' %}'" >Create</button>
             
             </div>
         </div>
@@ -49,7 +49,7 @@
     <!-- ========================= end main ========================= -->
 
     <!-- ========================= start footer ========================= -->
-    <footer class="fixed-bottom bg-dark text-center text-lg-start">
+    <footer class="fixed-bottom navbar-dark bg-primary text-center text-lg-start">
         <div class="text-center p-3" style="color: white;">
             Gmail Signature Generator - Copyright © 2021 
             <a class="text-light" href="https://tu-nguyen.github.io/">Tu Nguyen</a>
