@@ -88,43 +88,41 @@
 <!-- ========================= end template section ========================= -->
 
 <!-- ========================= start styling section ========================= -->
-<section id="styling", name="styling", class="styling">
+<!-- <section id="styling", name="styling", class="styling">
     <div class="container">
         <div class="row">
             <div class="col-md-12 offset-md-12 text">
                 <h2 class="pt-4">2. Adjust the Styling</h2>
                 
-                <form id="styleform" action="" method="post" class="form" name="{{ styleform.prefix }}">
+                <form id="styleform" method="post" class="form" name="{{ styleform.prefix }}">
                     {% csrf_token %}
                     {{ styleform }}
                 </form>
-
-
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- ========================= end styling section ========================= -->
 
 <!-- ========================= start data section ========================= -->
-<section id="data", name="data", class="data">
+<!-- <section id="data", name="data", class="data">
     <div class="container">
         <div class="row">
             <div class="col-md-12 offset-md-12 text">
                 <h2 class="pt-4">3. Input your Data and Img</h2>
 
-                <form id="dataform" action="" method="post" class="form" name="{{ dataform.prefix }}">
+                <form id="dataform" method="post" class="form" name="{{ dataform.prefix }}">
                     {% csrf_token %}
                     {{ dataform }}
                 </form>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- ========================= end data section ========================= -->
 
 <!-- ========================= start output section ========================= -->
-<section id="data", name="data", class="data">
+<!-- <section id="data", name="data", class="data">
     <div class="container">
         <div class="row">
             <div class="col-md-12 offset-md-12 text">
@@ -137,8 +135,21 @@
             </div>
         </div>
     </div>
-</section>
-
-
+</section> -->
 <!-- ========================= end output section ========================= -->
+
+
+<!-- ========================= form test ========================= -->
+<form id="copyform" action="" enctype="multipart/form-data" method="post">
+    {% csrf_token %}
+   
+    {{ styleform }}
+    {{ dataform }}
+    <button id="copy", class="copy btn btn-light", type="submit">Copy to Clipboard</button>
+</form>
+<!-- ========================= form test ========================= -->
+
+
+
+
 {% endblock content%}
