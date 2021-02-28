@@ -23,7 +23,9 @@
             {% comment %} <span class="navbar-toggler-icon"></span> {% endcomment %}
             </button>
             
-            <button class="btn btn-light" type="submit" onclick="location.href='{% url 'create' %}'" >Create</button>
+            {% if request.path == "/home/" or request.path == "/" %}
+                <button class="btn btn-light" type="submit" onclick="location.href='{% url 'create' %}'" >Create</button>
+            {% endif %}
             </div>
         </div>
     </nav>

@@ -65,13 +65,15 @@ h2 {
 .template{
     width: 100%;
     height: auto;
-    padding: 4rem 0;
+    padding: 4rem 0 0 0;
 } 
 
 .selectedTemplate{
-    /* filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf); */
+
     background: black;
-    /* border: black; */
+    border:3px solid black;
+    border-radius: 5px;
+    border-spacing: 0;
 }
 
 .template .container .carousel .carousel-inner{
