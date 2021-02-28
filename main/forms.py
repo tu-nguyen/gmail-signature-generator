@@ -1,5 +1,7 @@
-from django import forms
 from colorfield.fields import ColorField
+from colorfield.widgets import ColorWidget
+from django import forms
+
 
 FONT_CHOICES= [
     ('arial', 'Arial'),
@@ -14,10 +16,10 @@ FONT_CHOICES= [
     ]
 
 class StyleForm(forms.Form):
-    font_style_field= forms.CharField(label="Font Style", widget=forms.Select(choices=FRUIT_CHOICES))
+    font_style_field= forms.CharField(label="Font Style", widget=forms.Select(choices=FONT_CHOICES))
     font_size_field = forms.IntegerField(label="Font Size")
-    primary_color_field = forms.CharField(label="Primary Color", widget=ColorPickerWidget)
-    secondary_color_field = forms.CharField(label="Secondary Color", widget=ColorPickerWidget)
+    primary_color_field = forms.CharField(label="Primary Color", max_length=7, widget=forms.TextInput(attrs={'type': 'color'}))
+    secondary_color_field = forms.CharField(label="Secondary Color", max_length=7, widget=forms.TextInput(attrs={'type': 'color'}))
     
 
 class DataForm(forms.Form):

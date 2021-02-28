@@ -94,6 +94,10 @@
             <div class="col-md-12 offset-md-12 text">
                 <h2 class="pt-4">2. Adjust the Styling</h2>
                 
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ styleform.as_p }}
+                </form>
 
 
             </div>
@@ -108,6 +112,11 @@
         <div class="row">
             <div class="col-md-12 offset-md-12 text">
                 <h2 class="pt-4">3. Input your Data and Img</h2>
+
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ dataform.as_p }}
+                </form>
             </div>
         </div>
     </div>
@@ -121,7 +130,7 @@
             <div class="col-md-12 offset-md-12 text">
                 <form class="form-inline my-2 my-lg-0">
                     <h2 class="pt-4 pb-5">4. Copypasta to your signature</h2>
-                    <button class="btn btn-light" type="submit">Copy to Clipboard</button>
+                    <button class="btn btn-light" type="submit" onclick="copyToClipboard()">Copy to Clipboard</button>
                 </form>
             </div>
         </div>

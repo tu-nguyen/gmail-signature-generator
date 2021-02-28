@@ -15,10 +15,9 @@ $(document).ready(function(){
     wrap: true
   })
 
+  // template select
   let $select = $('#template .carousel-inner')
-
   $select.click(function(e){
-
     if ($(e.target).parent().hasClass('selectedTemplate')){
       // alert(1);
     } else {
@@ -27,6 +26,13 @@ $(document).ready(function(){
     }
     return false;
   })
+
+  // copy to clipboard
+  submitForms = function(){
+    document.forms["styleform"].submit();
+    document.forms["dataform"].submit();
+  }
+
 });
 
 
