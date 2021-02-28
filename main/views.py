@@ -18,14 +18,12 @@ class CreatePageView(TemplateView):
         return self.render_to_response({'styleform': StyleForm(prefix='styleform_pre'), 'dataform': DataForm(prefix='dataform_pre')})
 
     def post(self, request, *args, **kwargs):
-
-        # context = self.get_context_data(**kwargs)
-
         styleform = _get_form(request, StyleForm, 'styleform_pre')
         dataform = _get_form(request, DataForm, 'dataform_pre')
-        # if styleform.is_bound and styleform.is_valid():
-        #     # Process styleform and render response
-        # elif dataform.is_bound and dataform.is_valid():
-        #     # Process dataform and render response
+
         if styleform.is_bound and styleform.is_valid() and dataform.is_bound and dataform.is_valid():
-            return self.render_to_response({'styleform': styleform, 'dataform': dataform})
+            styleform.save()
+            dataform.save()
+        return self.render_to_response({'styleform': styleform, 'dataform': dataform})
+
+    

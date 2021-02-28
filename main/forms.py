@@ -15,19 +15,19 @@ FONT_CHOICES= [
     ('verdana', 'Verdana'),
     ]
 
+# your_name = forms.CharField(widget=forms.TextInput(attrs=dict(required=True, max_length=30)), label=("our name"))
+
 class StyleForm(forms.Form):
     font_style_field= forms.CharField(label="Font Style", widget=forms.Select(choices=FONT_CHOICES))
-    font_size_field = forms.IntegerField(label="Font Size")
+    font_size_field = forms.IntegerField(label="Font Size", min_value=1, max_value=3)
     primary_color_field = forms.CharField(label="Primary Color", max_length=7, widget=forms.TextInput(attrs={'type': 'color'}))
     secondary_color_field = forms.CharField(label="Secondary Color", max_length=7, widget=forms.TextInput(attrs={'type': 'color'}))
-    
-    def __str__(self):
-        style = font_style_field + str(font_size_field)
-        return self.style
 
 class DataForm(forms.Form):
-    first_name_field = forms.CharField(label="First Name", max_length=50, required=True)
-    last_name_field = forms.CharField(label="Last Name", max_length=50, required=True)
+    # first_name_field = forms.CharField(label="First Name", max_length=50, required=True)
+    # last_name_field = forms.CharField(label="Last Name", max_length=50, required=True)
+    first_name_field = forms.CharField(widget=forms.TextInput(attrs=dict(max_length=50, required=True)), label="First Name")
+    last_name_field = forms.CharField(widget=forms.TextInput(attrs=dict(max_length=50, required=True)), label="First Name")
     job_title_field = forms.CharField(label="Job Title", max_length=200)
     phone_number_field = forms.CharField(label="Phone Number", max_length=20)
     mobile_number_field = forms.CharField(label="Mobile Number", max_length=20)
@@ -51,6 +51,3 @@ class DataForm(forms.Form):
     banner_url_field = forms.URLField(label="Banner URL")
     banner_link_field = forms.URLField(label="Banner Link")
 
-    def __str__(self):
-        name = first_name_field + last_name_field
-        return self.name_field

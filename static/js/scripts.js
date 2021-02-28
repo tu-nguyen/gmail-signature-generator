@@ -27,13 +27,13 @@ $(document).ready(function(){
     return false;
   })
 
-
+  // final copypasta function
+  document.getElementById("copy").addEventListener("click", function() {
+    alert(1);
+    document.getElementById("styleform").submit();
+    document.getElementById("dataform").submit();
+  });
 });
 
-// copy to clipboard
-function copyToClipboard() {
-  // alert(1);
-  document.forms["styleform"].submit();
-  document.forms["dataform"].submit();
+
   
-}
