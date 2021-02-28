@@ -42,17 +42,67 @@ body {
     background: var(--bs-primary);
 }
 
-.main{
+section{
     width: 100vw;
     height: 100vh;
     padding: 4rem 0;
 } 
 
-img{
+/* main */
+
+
+/* main */
+.main img{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
     height: 70%;
-    /* padding-top: 10px; */
 }
+
+/* template */
+.template{
+    width: 100vw;
+    height: auto;
+    padding: 4rem 0;
+} 
+
+.carousel-multi-item{
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.template .container .carousel .left{
+    left: -10%;
+}
+
+.template .container .carousel .right{
+    right: -10%;
+}
+
+@media (max-width: 768px) {
+    .template .container .carousel .left{
+        left: -3%;
+    }
+    
+    .template .container .carousel .right{
+        right: -3%;
+    }
+}
+
+/* styling */
+.styling{
+    width: 100vw;
+    height: auto;
+    padding: 4rem 0;
+} 
+
+/* data */
+.data{
+    width: 100vw;
+    height: auto;
+    padding: 4rem 0;
+} 
+
+/* footer */

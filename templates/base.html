@@ -24,7 +24,6 @@
             </button>
             
             <button class="btn btn-light" type="submit" onclick="location.href='{% url 'create' %}'" >Create</button>
-            
             </div>
         </div>
     </nav>
@@ -33,26 +32,15 @@
 <!-- ========================= end header ========================= -->
 
 <body>
-    <!-- ========================= start main ========================= -->
-    <div id="content", name="content", class="main">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 offset-md-12 text">
-                    <section>
-                    {% block content %}
-                    {% endblock %}
-                    <section>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ========================= end main ========================= -->
+    
+    {% block content %}
+    {% endblock %}
 
     <!-- ========================= start footer ========================= -->
-    <footer class="fixed-bottom navbar-dark bg-primary text-center text-lg-start">
+    <footer class="footer fixed-bottom navbar-dark bg-primary text-center text-lg-start">
         <div class="text-center p-3" style="color: white;">
             Gmail Signature Generator - Copyright © 2021 
-            <a class="text-light" href="https://tu-nguyen.github.io/">Tu Nguyen</a>
+            <a class="text-light" style="text-decoration: none;" href="https://tu-nguyen.github.io/">Tu Nguyen</a>
         </div>
     </footer>
     <!-- ========================= end footer ========================= -->
@@ -63,5 +51,4 @@
     <script src="{% static 'js/scripts.js' %}"></script>
 
 </body>
-
 </html>
