@@ -61,15 +61,17 @@ h2 {
     height: 70%;
 }
 
+/*  */
+
+
 /* template */
 .template{
     width: 100%;
     height: auto;
-    padding: 4rem 0 0 0;
+    /* padding: 2rem 0 0 0; */
 } 
 
 .selectedTemplate{
-
     background: black;
     border:3px solid black;
     border-radius: 5px;

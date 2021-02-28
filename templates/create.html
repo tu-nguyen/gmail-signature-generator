@@ -4,152 +4,63 @@
 {% load static %}
 
 {% block content %}
-
-<!-- ========================= start template section ========================= -->
-<section id="template", name="template", class="template">
+<!-- ========================= start accordian section ========================= -->
+<section id="accordian", name="accordian", class="accordian">
     <div class="container">
-        <div class="row pb-2">
-            <div class="col-md-12 text">
-                <h2 class="pt-5">1. Choose a template</h2>
-            </div>
-        </div>
-
-        <!-- ========================= start carousel ========================= -->
-        <div id="templateCarousel" class="carousel slide carousel-multi-item pt-5" data-ride="carousel2">
-            <button class="left carousel-control-prev" type="button" data-bs-target="#templateCarousel"  data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="right carousel-control-next" type="button" data-bs-target="#templateCarousel"  data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-            <!--Slides-->
-            <div class="carousel-inner" role="listbox">
-                <!--First slide-->
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-2 selectedTemplate">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                                alt="Card image cap">
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                alt="Card image cap">
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                                <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                alt="Card image cap">
-                            </div>
+        <div class="row">
+            <div class="col-md-12 offset-md-12 text">
+                <div class="accordion accordion-flush" id="accordionFlushExample">
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            <h2 class="">1. Choose a template</h2>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            {% include 'template.html' %}
                         </div>
                     </div>
-                </div>
-                <!--/.First slide-->
-
-                <!--Second slide-->
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="card mb-2">
-                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(34).jpg"
-                                alt="Card image cap">
-                            </div>
-                        </div>
-            
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(18).jpg"
-                                alt="Card image cap">
-                            </div>
-                        </div>
-            
-                        <div class="col-md-4 clearfix d-none d-md-block">
-                            <div class="card mb-2">
-                            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(35).jpg"
-                                alt="Card image cap">
-                            </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            <h2 class="">2. Adjust the Styling</h2>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            {% include 'style.html' %}
                         </div>
                     </div>
+                    </div>
+                    <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed text-white" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                            <h2 class="">3. Input your Data and Img</h2>
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            {% include 'data.html' %}
+                        </div>
+                    </div>
+                    </div>
                 </div>
-                <!--/.Second slide-->
             </div>
         </div>
-
-        <!-- ========================= end carousel ========================= -->
     </div>
 </section>
-<!-- ========================= end template section ========================= -->
+<!-- ========================= end accordian section ========================= -->
 
-<!-- ========================= start styling section ========================= -->
-<!-- <section id="styling", name="styling", class="styling">
-    <div class="container">
+<!-- ========================= start final button section ========================= -->
+ <div id="final", name="final", class="final fixed-bottom pb-5">
+    <div class="container pb-4">
         <div class="row">
             <div class="col-md-12 offset-md-12 text">
-                <h2 class="pt-4">2. Adjust the Styling</h2>
-                
-                <form id="styleform" method="post" class="form" name="{{ styleform.prefix }}">
-                    {% csrf_token %}
-                    {{ styleform }}
-                </form>
+                <button id="copy" class="copy btn btn-light" type="submit" form="dataform">Copy to Clipboard</button>
             </div>
         </div>
     </div>
-</section> -->
-<!-- ========================= end styling section ========================= -->
-
-<!-- ========================= start data section ========================= -->
-<!-- <section id="data", name="data", class="data">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 offset-md-12 text">
-                <h2 class="pt-4">3. Input your Data and Img</h2>
-
-                <form id="dataform" method="post" class="form" name="{{ dataform.prefix }}">
-                    {% csrf_token %}
-                    {{ dataform }}
-                </form>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- ========================= end data section ========================= -->
-
-<!-- ========================= start output section ========================= -->
-<!-- <section id="data", name="data", class="data">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 offset-md-12 text">
-                <form class="form-inline my-2 my-lg-0" action="" method="post">
-                    <h2 class="pt-4 pb-5">4. Copypasta to your signature</h2>
-
-                    {% csrf_token %}
-                    <button id="copy", value="copy", class="copy btn btn-light", type="submit">Copy to Clipboard</button>
-                </form>
-            </div>
-        </div>
-    </div>
-</section> -->
-<!-- ========================= end output section ========================= -->
-
-
-<!-- ========================= form test ========================= -->
-<form id="copyform" action="" enctype="multipart/form-data" method="post">
-    {% csrf_token %}
-   
-    {{ styleform }}
-    {{ dataform }}
-    <button id="copy", class="copy btn btn-light", type="submit">Copy to Clipboard</button>
-</form>
-<!-- ========================= form test ========================= -->
-
-
-
-
+</div>
 {% endblock content%}

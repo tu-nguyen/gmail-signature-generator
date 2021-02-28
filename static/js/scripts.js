@@ -28,17 +28,18 @@ $(document).ready(function(){
   })
 
   // final copypasta function
-  // document.getElementById("copy").addEventListener("click", function() {
-  //   alert(1);
-  //   document.getElementById("styleform").submit();
-  //   document.getElementById("dataform").submit();
-  // });
+  document.getElementById("copy").addEventListener("click", function() {
+    alert(1);
+    document.getElementById("styleform").submit();
+    document.getElementById("dataform").submit();
+  });
   
-  document.ready(function(){
-    $("#copy").click(function(){        
-        $("#copyform").submit(); // Submit the form
-    });
-});
+//   document.ready(function(){
+//     $("#copy").click(function(){  
+//         alert(1);      
+//         $("#copyform").submit(); // Submit the form
+//     });
+// });
 
 
 });
