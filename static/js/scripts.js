@@ -27,15 +27,13 @@ $(document).ready(function(){
     return false;
   })
 
-  // copy to clipboard
-  submitForms = function(){
-    document.forms["styleform"].submit();
-    document.forms["dataform"].submit();
-  }
 
 });
 
-
-
-
-
+// copy to clipboard
+function copyToClipboard() {
+  // alert(1);
+  document.forms["styleform"].submit();
+  document.forms["dataform"].submit();
+  
+}

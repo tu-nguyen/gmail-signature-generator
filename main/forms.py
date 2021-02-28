@@ -21,14 +21,16 @@ class StyleForm(forms.Form):
     primary_color_field = forms.CharField(label="Primary Color", max_length=7, widget=forms.TextInput(attrs={'type': 'color'}))
     secondary_color_field = forms.CharField(label="Secondary Color", max_length=7, widget=forms.TextInput(attrs={'type': 'color'}))
     
+    def __str__(self):
+        style = font_style_field + str(font_size_field)
+        return self.style
 
 class DataForm(forms.Form):
-    first_name_field = forms.CharField(label="First Name", max_length=50)
-    last_name_field = forms.CharField(label="Last Name", max_length=50)
+    first_name_field = forms.CharField(label="First Name", max_length=50, required=True)
+    last_name_field = forms.CharField(label="Last Name", max_length=50, required=True)
     job_title_field = forms.CharField(label="Job Title", max_length=200)
     phone_number_field = forms.CharField(label="Phone Number", max_length=20)
     mobile_number_field = forms.CharField(label="Mobile Number", max_length=20)
-    last_name_field = forms.CharField(label="Last Name", max_length=50)
     job_title_field = forms.CharField(label="Job Title", max_length=50)
     email_field = forms.EmailField(label="Email", max_length=50)
 
@@ -48,3 +50,7 @@ class DataForm(forms.Form):
     photo_link_field = forms.URLField(label="Photo Link")
     banner_url_field = forms.URLField(label="Banner URL")
     banner_link_field = forms.URLField(label="Banner Link")
+
+    def __str__(self):
+        name = first_name_field + last_name_field
+        return self.name_field
