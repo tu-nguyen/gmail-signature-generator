@@ -69,7 +69,9 @@ h2 {
 } 
 
 .selectedTemplate{
-    filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf);
+    /* filter: brightness(1.1) drop-shadow(1px 8px 30px #b1afaf); */
+    background: black;
+    /* border: black; */
 }
 
 .template .container .carousel .carousel-inner{
@@ -78,8 +80,6 @@ h2 {
     margin-right: auto;
     padding: 0;
 }
-
-
 
 /* @media (max-width: 768px) {
     .template .container .carousel .left{
@@ -95,14 +95,14 @@ h2 {
 
 /* styling */
 .styling{
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding: 4rem 0;
 } 
 
 /* data */
 .data{
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding: 4rem 0;
 } 

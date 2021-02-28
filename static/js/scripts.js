@@ -1,29 +1,33 @@
-
+$(document).ready(function(){
   // carousel from homepage
-  var homeCarousel = document.querySelector('#homeCarousel')
-  var carousel = new bootstrap.Carousel(homeCarousel, {
+  let homeCarousel = document.querySelector('#homeCarousel')
+  let carousel = new bootstrap.Carousel(homeCarousel, {
   //   interval: 7000,
     wrap: true
   })
 
   // templates carousel
-  var templateCarousel = document.querySelector('#templateCarousel')
-  var carousel2 = new bootstrap.Carousel(templateCarousel, {
+  let templateCarousel = document.querySelector('#templateCarousel')
+  let carousel2 = new bootstrap.Carousel(templateCarousel, {
     interval: false,
     keyboard: true,
     ride:false,
     wrap: true
   })
 
-  var selectedTemplate = $('.card');
-  $selectedTemplate.click(function(e){
-    $('#templateCarousel .carousel-inner .carousel-item .row .card').removeClass('selectedTemplate');
-    e.target.classList.add('selectedTemplate');
+  let $select = $('#template .carousel-inner')
+
+  $select.click(function(e){
+
+    if ($(e.target).parent().hasClass('selectedTemplate')){
+      // alert(1);
+    } else {
+      $('.card').removeClass('selectedTemplate');
+      $(e.target).closest('.card').addClass('selectedTemplate');
+    }
+    return false;
   })
-
-
-
-
+});
 
 
 
