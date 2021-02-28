@@ -21,28 +21,28 @@ class StyleForm(forms.Form):
     
 
 class DataForm(forms.Form):
-    first_name_field = forms.CharField(label="First Name", max_length=200)
-    last_name_field = forms.CharField(label="Last Name", max_length=200)
+    first_name_field = forms.CharField(label="First Name", max_length=50)
+    last_name_field = forms.CharField(label="Last Name", max_length=50)
     job_title_field = forms.CharField(label="Job Title", max_length=200)
+    phone_number_field = forms.CharField(label="Phone Number", max_length=20)
+    mobile_number_field = forms.CharField(label="Mobile Number", max_length=20)
+    last_name_field = forms.CharField(label="Last Name", max_length=50)
+    job_title_field = forms.CharField(label="Job Title", max_length=50)
+    email_field = forms.EmailField(label="Email", max_length=50)
 
+    website_url_field = forms.URLField(label="Website")
+    linkedin_url_field = forms.URLField(label="LinkedIn")
+    github_url_field = forms.URLField(label="Github")
+    twitter_url_field = forms.URLField(label="Twitter")
+    facebook_url_field = forms.URLField(label="Facebook")
+    youtube_url_field = forms.URLField(label="Youtube")
 
-    # //phone
-    # //mobile
-    # //email
+    company_name_field = forms.CharField(label="Company Name", max_length=200)
+    company_website_url_field = forms.URLField(label="Company Website")
+    company_address_field = forms.CharField(label="Company Address 1", max_length=200)
+    company_address_2_field = forms.CharField(label="Company Address 2", max_length=200)
 
-    # //linkedin
-    # //twitter
-    # //facebook
-    # //instagram
-    # //youtube
-
-    # //company name
-    # //company website
-    # //company address
-    # //company address 2
-
-
-    # //photo_url
-    # //photo_link
-    # //banner_url
-    # //banner_link
+    photo_url_field = forms.URLField(label="Photo URL")
+    photo_link_field = forms.URLField(label="Photo Link")
+    banner_url_field = forms.URLField(label="Banner URL")
+    banner_link_field = forms.URLField(label="Banner Link")
