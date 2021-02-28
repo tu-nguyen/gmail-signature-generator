@@ -1,3 +1,5 @@
+from colorfield.fields import ColorField
 from django.db import models
 
-# Create your models here.
+class MyModel(model.Model):
+    color = ColorField(default='#FF0000')
