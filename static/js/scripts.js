@@ -29,18 +29,24 @@ $(document).ready(function(){
 
   // final copypasta function
   document.getElementById("copy").addEventListener("click", function() {
-    alert(1);
-    document.getElementById("styleform").submit();
-    document.getElementById("dataform").submit();
-  });
-  
-//   document.ready(function(){
-//     $("#copy").click(function(){  
-//         alert(1);      
-//         $("#copyform").submit(); // Submit the form
-//     });
-// });
+    var inputs = document.getElementById('dataform');
+    var collapseThree = document.getElementById('flush-collapseThree');
 
+    if(inputs[0].value == "" || inputs[1].value == ""){
+        // found an empty field that is required
+        // alert("Please fill all required fields");
+        document.getElementById('testt').click();
+        return false;
+    } else {
+      if (collapseThree.classList.contains('show')) {
+        // alert(1);
+        // document.getElementById('testt').click();
+      } else {
+        // alert(2);
+      }
+      document.getElementById("styleform").submit();
+    }
+  });
 
 });
 

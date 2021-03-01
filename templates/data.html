@@ -33,11 +33,17 @@
     </div>
 </section> -->
 <!-- ========================= end output section ========================= -->
-
-<form id="dataform" name="dataform" action="" enctype="multipart/form-data" method="post">
-    {% csrf_token %}
-   
-    {{ styleform }}
-    {{ dataform }}
-    {% comment %} <button id="copy", class="copy btn btn-light", type="submit">Copy to Clipboard</button> {% endcomment %}
-</form>
+<section id="styling", name="styling", class="styling">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 offset-md-12 text">
+                <form id="dataform" name="dataform" action="" enctype="multipart/form-data" method="post" target="iframe2">
+                    {% csrf_token %}
+                    {{ dataform.as_table }}
+                    {% comment %} <button id="copy", class="copy btn btn-light", type="submit">Copy to Clipboard</button> {% endcomment %}
+                </form>
+                <iframe name="iframe2" style="display:none"></iframe>
+            </div>
+        </div>
+    </div>
+</section> 

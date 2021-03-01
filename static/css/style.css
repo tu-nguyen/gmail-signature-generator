@@ -45,7 +45,6 @@ body {
 section{
     width: 100vw;
     height: 100vh;
-    padding: 4rem 0;
 } 
 
 h2 {
@@ -53,6 +52,10 @@ h2 {
 }
 
 /* main */
+.main {
+    padding: 2rem 0 0 0;
+}
+
 .main img{
     display: block;
     margin-left: auto;
@@ -61,22 +64,17 @@ h2 {
     height: 70%;
 }
 
-/*  */
+/* create */
+.create .accordion-button {
+    background: var(--bs-primary);
+}
 
 
 /* template */
 .template{
     width: 100%;
     height: auto;
-    /* padding: 2rem 0 0 0; */
 } 
-
-.selectedTemplate{
-    background: black;
-    border:3px solid black;
-    border-radius: 5px;
-    border-spacing: 0;
-}
 
 .template .container .carousel .carousel-inner{
     width: 70%;
@@ -97,18 +95,30 @@ h2 {
     }
 } */
 
+.card-img-top{
+    filter: brightness(50%);
+}
+
+.selectedTemplate{
+    border:3px solid white;
+    border-spacing: 0;
+    
+}
+
+.selectedTemplate img{
+    filter: brightness(110%);
+}
+
 /* styling */
 .styling{
     width: 100%;
     height: auto;
-    padding: 4rem 0;
 } 
 
 /* data */
 .data{
     width: 100%;
     height: auto;
-    padding: 4rem 0;
 } 
 
 /* footer */

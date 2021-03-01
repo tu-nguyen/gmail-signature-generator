@@ -23,18 +23,16 @@ class CreatePageView(FormView):
         return self.render_to_response({'styleform': styleform, 'dataform': dataform})
 
     def post(self, request, *args, **kwargs):
-        styleform = _get_form(request, StyleForm, 'styleform_pre')
-        dataform = _get_form(request, DataForm, 'dataform_pre')
+        styleform = StyleForm(request.POST, prefix = 'styleform_pre')
+        dataform = DataForm(request.POST, prefix = 'dataform_pre')
 
-
-        # if style_form.is_valid(): #and data_form.is_valid():
-        #     ### do something
-        #     print("success")
-        #     return HttpResponseRedirect('..')
-        print(dataform.errors)
-        if dataform.is_valid():
-            ### do something
-            print("success2")
+        if styleform.is_valid():
+            test = styleform.cleaned_data['primary_color_field']
+            print(test)
+            return HttpResponseRedirect('..')
+        elif dataform.is_valid():
+            test = dataform.cleaned_data['first_name_field']
+            print(test)
             return HttpResponseRedirect('..')
         else:
             return self.form_invalid(styleform, dataform, **kwargs)

@@ -1,18 +1,18 @@
 <!-- templates/style.html -->
 
 <!-- ========================= start styling section ========================= -->
-<!-- <section id="styling", name="styling", class="styling">
+<section id="styling", name="styling", class="styling">
     <div class="container">
         <div class="row">
             <div class="col-md-12 offset-md-12 text">
-                <h2 class="pt-4">2. Adjust the Styling</h2>
-                
-                <form id="styleform" method="post" class="form" name="{{ styleform.prefix }}">
+                <form id="styleform" name="styleform" action="" enctype="multipart/form-data" method="post" target="iframe1">
                     {% csrf_token %}
-                    {{ styleform }}
+                    {{ styleform.as_p }}
+                    {% comment %} <button id="style" class="style" type="submit" style="visibility: hidden;"></button> {% endcomment %}
                 </form>
+                <iframe name="iframe1" style="display:none"></iframe>
             </div>
         </div>
     </div>
-</section> -->
+</section> 
 <!-- ========================= end styling section ========================= -->
