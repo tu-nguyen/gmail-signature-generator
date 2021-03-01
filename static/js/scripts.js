@@ -23,6 +23,13 @@ $(document).ready(function(){
     } else {
       $('.card').removeClass('selectedTemplate');
       $(e.target).closest('.card').addClass('selectedTemplate');
+      
+      alert(e.target.id);
+
+      document.styleform.template_style.value = e.target.id;
+      // document.styleform.template_style.value = 6;
+      document.getElementById("styleform_pre-template_style").value = e.target.id;
+      // document.getElementById("styleform").setAttribute('template_style', e.target.id);
     }
     return false;
   })
@@ -32,22 +39,17 @@ $(document).ready(function(){
     var inputs = document.getElementById('dataform');
     var collapseThree = document.getElementById('flush-collapseThree');
 
-    if(inputs[0].value == "" || inputs[1].value == ""){
+    if((inputs[0].value == "" || inputs[1].value == "") && !collapseThree.classList.contains('show')){
         // found an empty field that is required
         // alert("Please fill all required fields");
         document.getElementById('testt').click();
         return false;
     } else {
-      if (collapseThree.classList.contains('show')) {
-        // alert(1);
-        // document.getElementById('testt').click();
-      } else {
-        // alert(2);
-      }
+      // alert(1);
+      // document.styleform.template_style.value = 6;
       document.getElementById("styleform").submit();
     }
   });
-
 });
 
 

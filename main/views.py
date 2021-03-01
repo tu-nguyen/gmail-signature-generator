@@ -27,11 +27,11 @@ class CreatePageView(FormView):
         dataform = DataForm(request.POST, prefix = 'dataform_pre')
 
         if styleform.is_valid():
-            test = styleform.cleaned_data['primary_color_field']
+            test = styleform.cleaned_data['template_style']
             print(test)
             return HttpResponseRedirect('..')
         elif dataform.is_valid():
-            test = dataform.cleaned_data['first_name_field']
+            test = dataform.cleaned_data['first_name']
             print(test)
             return HttpResponseRedirect('..')
         else:
