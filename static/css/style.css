@@ -53,7 +53,7 @@ h2 {
 
 /* main */
 .main {
-    padding: 2rem 0 0 0;
+    /* background: black; */
 }
 
 .main img{
@@ -83,18 +83,6 @@ h2 {
     padding: 0;
 }
 
-/* @media (max-width: 768px) {
-    .template .container .carousel .left{
-        left: 0;
-        margin-left: 0;
-    }
-    
-    .template .container .carousel .right{
-        right: 0;
-        margin-right: 0;
-    }
-} */
-
 .card-img-top{
     filter: brightness(50%);
 }
@@ -115,6 +103,10 @@ h2 {
     height: auto;
 } 
 
+#styleform_pre-template_style {
+    display: none;
+}
+
 /* data */
 .data{
     width: 100%;
@@ -122,3 +114,12 @@ h2 {
 } 
 
 /* footer */
+
+
+
+@media (min-width: 768px) {
+    .main img{
+        width: 40%;
+        height: 40%;
+    }
+}

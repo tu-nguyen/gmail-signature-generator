@@ -2,7 +2,6 @@ $(document).ready(function(){
   // carousel from homepage
   let homeCarousel = document.querySelector('#homeCarousel')
   let carousel = new bootstrap.Carousel(homeCarousel, {
-  //   interval: 7000,
     wrap: true
   })
 
@@ -23,13 +22,7 @@ $(document).ready(function(){
     } else {
       $('.card').removeClass('selectedTemplate');
       $(e.target).closest('.card').addClass('selectedTemplate');
-      
-      alert(e.target.id);
-
-      document.styleform.template_style.value = e.target.id;
-      // document.styleform.template_style.value = 6;
       document.getElementById("styleform_pre-template_style").value = e.target.id;
-      // document.getElementById("styleform").setAttribute('template_style', e.target.id);
     }
     return false;
   })
@@ -45,8 +38,6 @@ $(document).ready(function(){
         document.getElementById('testt').click();
         return false;
     } else {
-      // alert(1);
-      // document.styleform.template_style.value = 6;
       document.getElementById("styleform").submit();
     }
   });

@@ -16,7 +16,7 @@ FONT_CHOICES= [
     ]
 
 class StyleForm(forms.Form):
-    template_style = forms.IntegerField(label="Template Style", initial=1, required=False)
+    template_style = forms.IntegerField(label="Template Style", widget = forms.HiddenInput(), initial=1, required=False)
     font_style= forms.CharField(label="Font Style", widget=forms.Select(choices=FONT_CHOICES), required=False)
     font_size = forms.IntegerField(label="Font Size", min_value=1, max_value=3, initial=2, required=False)
     primary_color = forms.CharField(label="Primary Color", max_length=7, widget=forms.TextInput(attrs={'type': 'color'}))
