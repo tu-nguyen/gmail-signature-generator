@@ -5,10 +5,28 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 offset-md-12 text">
-                <form id="styleform" name="styleform" action="" enctype="multipart/form-data" method="post" target="iframe1">
+                <form id="styleform" class="row g-3" name="styleform" action="" enctype="multipart/form-data" method="post" target="iframe1">
                     {% csrf_token %}
                     {{ styleform.as_p }}
                     {% comment %} <button id="style" class="style" type="submit" style="visibility: hidden;"></button> {% endcomment %}
+                        {% comment %} <div class="col-md-6">
+                            <label for="" class="form-label">{{ styleform.font_style.label }}</label>
+                            {{ styleform.font_style }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ styleform.font_size.label }}
+                            {{ styleform.font_size }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ styleform.primary_color.label }}
+                            {{ styleform.primary_color }}
+                        </div>
+                        <div class="col-md-6">
+                            {{ styleform.secondary_color.label }}
+                            {{ styleform.secondary_color }}
+                        </div> {% endcomment %}
+
+                
                 </form>
                 <iframe name="iframe1" style="display:none"></iframe>
             </div>
