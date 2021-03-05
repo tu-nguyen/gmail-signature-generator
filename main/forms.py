@@ -25,11 +25,15 @@ class StyleForm(forms.Form):
 class DataForm(forms.Form):
     first_name = forms.CharField(widget=forms.TextInput(attrs=dict(max_length=50, required=True)), label="First Name")
     last_name = forms.CharField(widget=forms.TextInput(attrs=dict(max_length=50, required=True)), label="Last Name")
-    job_title = forms.CharField(label="Job Title", max_length=200, required=False)
     phone_number = forms.CharField(label="Phone Number", max_length=20, required=False)
     mobile_number = forms.CharField(label="Mobile Number", max_length=20, required=False)
-    job_title = forms.CharField(label="Job Title", max_length=50, required=False)
+
     email = forms.EmailField(label="Email", max_length=50, required=False)
+    job_title = forms.CharField(label="Job Title", max_length=50, required=False)
+    company_name = forms.CharField(label="Company Name", max_length=200, required=False)
+    company_website_url = forms.URLField(label="Company Website", required=False)
+    company_address = forms.CharField(label="Company Address 1", max_length=200, required=False)
+    company_address_2 = forms.CharField(label="Company Address 2", max_length=200, required=False)
 
     website_url = forms.URLField(label="Website", required=False)
     linkedin_url = forms.URLField(label="LinkedIn", required=False)
@@ -37,11 +41,6 @@ class DataForm(forms.Form):
     twitter_url = forms.URLField(label="Twitter", required=False)
     facebook_url = forms.URLField(label="Facebook", required=False)
     youtube_url = forms.URLField(label="Youtube", required=False)
-
-    company_name = forms.CharField(label="Company Name", max_length=200, required=False)
-    company_website_url = forms.URLField(label="Company Website", required=False)
-    company_address = forms.CharField(label="Company Address 1", max_length=200, required=False)
-    company_address_2 = forms.CharField(label="Company Address 2", max_length=200, required=False)
 
     photo_url = forms.URLField(label="Photo URL", required=False)
     photo_link = forms.URLField(label="Photo Link", required=False)

@@ -29,6 +29,8 @@ class CreatePageView(FormView):
         if styleform.is_valid():
             test = styleform.cleaned_data['template_style']
             print(test)
+            test = styleform.cleaned_data['primary_color']
+            print(test)
             return HttpResponseRedirect('..')
         elif dataform.is_valid():
             test = dataform.cleaned_data['first_name']

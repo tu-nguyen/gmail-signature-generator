@@ -39,7 +39,21 @@
             <div class="col-md-12 offset-md-12 text">
                 <form id="dataform" name="dataform" action="" enctype="multipart/form-data" method="post" target="iframe2">
                     {% csrf_token %}
-                    {{ dataform.as_table }}
+                    {% comment %} {{ dataform.as_table }} {% endcomment %}
+                    
+
+
+                    <div class="row">
+                        <div class="col">
+                        {% for field in dataform %}
+                            {{ field.label }} {{ field }}
+                            {% if forloop.counter|divisibleby:"2" %}
+                                </div></div><div class="row"><div class="col">
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                    </div>
+
                     {% comment %} <button id="copy", class="copy btn btn-light", type="submit">Copy to Clipboard</button> {% endcomment %}
                 </form>
                 <iframe name="iframe2" style="display:none"></iframe>
